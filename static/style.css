@@ -1,10 +1,17 @@
+@font-face {
+    font-family: 'TheAliens'; /* Name for the font */
+    src: url('thealiens.ttf') format('truetype'); /* Path to the font file */
+    font-weight: normal; /* Optional: set font weight */
+    font-style: normal; /* Optional: set font style */
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Fallback fonts */
     margin: 0;
     padding: 0;
     background-color: rgb(224, 209, 190);
     background-size: cover;
-    color: rgb(3, 3, 3);  /* Ensure text is readable against the background */
+    color: rgb(3, 3, 3); /* Ensure text is readable */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -18,7 +25,7 @@ body {
     justify-content: center;
     width: 100%;
     position: fixed;
-    height:  256px;
+    height:  200px;
     flex-direction: column;
     background-color: #000000;
     z-index: 10;
@@ -26,11 +33,13 @@ body {
 
 .top h1 {
     color: #faf9ff;
-    font-family: cursive;
-    font-size: 40px;
+    font-family: 'TheAliens', sans-serif;
+    font-size: 130px;
+    font-weight: 100;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* X-offset, Y-offset, blur radius, color */
     z-index: 1;
     word-spacing: 10px;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
     margin: 0px;
     @media only screen and (max-width: 800px) {
         text-align: center;
@@ -40,8 +49,9 @@ body {
     }
 }
 
+
 .search-container {
-    margin-top: 50px;
+    margin-top: 10px;
     width: 50%;
     max-width: 500px;
     z-index: 1;
@@ -79,7 +89,7 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #094f99;
+    background-color: #012c5a;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -173,4 +183,9 @@ body {
 
 .main-container iframe{
     height: 150px !important;
+}
+
+.searched-track2 iframe{
+    height: 200px !important;
+    width: 60% !important;
 }
